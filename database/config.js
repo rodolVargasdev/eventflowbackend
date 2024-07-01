@@ -8,7 +8,7 @@ const dbConnection = async() => {
 
     }catch (error){
         console.log(error);
-        throw new Error('Error a lahora de inicializar BD')
+        throw new Error('Error a la hora de inicializar BD')
     }
 }
 

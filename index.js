@@ -2,6 +2,7 @@ const express = require('express');
 const { dbConnection } = require('./database/config');
 const cors = require('cors');
 require('dotenv').config();
+const path = require('path');
 
 
 console.log(process.env)
@@ -24,6 +25,7 @@ app.use( express.json ());
 //Rutas
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
+app.use('/api/reports', require('./routes/reports'));
 
 //Escuchar peticiones
 app.listen(process.env.PORT, () => {
