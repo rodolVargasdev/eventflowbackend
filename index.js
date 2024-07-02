@@ -26,6 +26,8 @@ app.use( express.json ());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/reports', require('./routes/reports'));
+// Ruta recuperación contraseña
+app.use('/api/recovery', require('./routes/recovery'));
 
 //Escuchar peticiones
 app.listen(process.env.PORT, () => {
